@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "GasTrackingDappIcp_backend": {
+      "candid": "src/GasTrackingDappIcp_backend/GasTrackingDappIcp_backend.did",
+      "package": "GasTrackingDappIcp_backend",
+      "type": "rust"
+    },
+    "GasTrackingDappIcp_frontend": {
+      "dependencies": [
+        "GasTrackingDappIcp_backend"
+      ],
+      "source": [
+        "src/GasTrackingDappIcp_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "GasTrackingDappIcp_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

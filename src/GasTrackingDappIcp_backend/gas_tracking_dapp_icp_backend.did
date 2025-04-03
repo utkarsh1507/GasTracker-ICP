@@ -1,0 +1,19 @@
+type GasInfo = record {
+    cycles_used: nat64;
+    memory_used: nat64;
+    timestamp: nat64;
+};
+
+type TransactionRecord = record {
+    transaction_type: text;
+    gas_info: GasInfo;
+};
+
+service : {
+    "record_simple_transaction": () -> (GasInfo);
+    "record_complex_transaction": () -> (GasInfo);
+    "record_storage_transaction": () -> (GasInfo);
+    "get_all_transactions": () -> (vec TransactionRecord) query;
+    "get_transactions_by_type": (text) -> (vec TransactionRecord) query;
+    "get_gas_statistics": () -> (vec record { text; vec GasInfo }) query;
+} 

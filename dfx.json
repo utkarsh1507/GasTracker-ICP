@@ -1,13 +1,13 @@
 {
   "canisters": {
-    "GasTrackingDappIcp_backend": {
+    "gas_tracking_dapp_icp_backend": {
       "candid": "src/GasTrackingDappIcp_backend/GasTrackingDappIcp_backend.did",
-      "package": "GasTrackingDappIcp_backend",
+      "package": "gas_tracking_dapp_icp_backend",
       "type": "rust"
     },
     "GasTrackingDappIcp_frontend": {
       "dependencies": [
-        "GasTrackingDappIcp_backend"
+        "gas_tracking_dapp_icp_backend"
       ],
       "source": [
         "src/GasTrackingDappIcp_frontend/dist"
